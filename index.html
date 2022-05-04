@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Reference</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Montserrat:wght@400;500;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>HTML Form Reference</h1>
+    </header>
+    <main>
+        <section class="table">
+            <h3>Form Tags</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;form&gt;</td>
+                        <td>Form</td>
+                        <td class="tag-description">
+                            <p>
+                                Collects and sends information to an external source. 
+                                It can contain multiple <span>inputs</span> and be submitted.
+                            </p>  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input&gt;</td>
+                        <td>Input</td>
+                        <td class="tag-description"> 
+                            <p>
+                                Renders a variety of input fields on a webpage.
+                                The way it's rendered is determined by the <code>type</code> attribute.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;label&gt;</td>
+                        <td>Label</td>
+                        <td class="tag-description">
+                            <p>
+                                Provides identification for a specific &lt;input&gt; 
+                                based on matching values with the &lt;input&gt;'s <code>id</code> attribute 
+                                and the &lt;label&gt;'s <code>for</code> attribute. By default, clicking on the &lt;label&gt; will focus the field on the related &lt;input&gt;.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;textarea&gt;</td>
+                        <td>Text Area</td>
+                        <td class="tag-description">
+                            <p>
+                                Creates a text-box for multi-line input. 
+                                When rendered by the browser, it can be stretched/shrunk by the user, 
+                                even tho you can determine its initial size, with the <code>rows</code> and <code>cols</code> attributes.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>                            
+                        <td>&lt;select&gt;</td>
+                        <td>Select</td>
+                        <td class="tag-description">
+                            <p>
+                                Creates a dropdown list. The list of options of the dropdown are created with the &lt;option&gt; tag. 
+                                By default only one &lt;option&gt; can be selected at a time.
+                            </p>
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td>&lt;datalist&gt;</td>
+                        <td>Data list</td>
+                        <td class="tag-description">
+                            <p>
+                                Achieves a basic search/autocomplete functionality by pairing itself with an &lt;input&gt;. To do it, the &lt;option&gt;'s <code>list</code> attribute's value must match the value of &lt;datalist&gt;'s <code>id</code>. 
+                                The list items of this tag are specified as &lt;option&gt; elements nested inside it.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section class="table">
+            <h3>Form Input Attributes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td><code>"text"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Renders a single row input field that users can type text inside.
+                            </p>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td><code>"number"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Allows the user to enter only numbers and a few special characters inside the field. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td><code>"checkbox"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Renders a single checkbox item. To create a group of checkboxes related to the same topic, they should all use the same <code>name</code> attribute. These checkboxes may have their own <code>value</code> attributes, 
+                                to represent the name of the checkbox selected between the &lt;input&gt; tags.  
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td><code>"range"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Creates a slider that will act as a selector between a minimum and a maximum value. 
+                                These values are set using the <code>min</code> and <code>max</code> attributes respectively.
+                                The slider can be adjusted to move in different steps or increments using the <code>step</code> attribute.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td><code>"radio"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Renders a single radio button. Multiple radio buttons of a related topic are given the same name attribute value. 
+                                Only a single option can be chosen from a group of radio buttons.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td><code>"password"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Renders a single row input field which allows the user to type censored text inside the field. 
+                                It is used to type in sensitive information.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td><code>"submit"</code></td>
+                        <td class="att-description">
+                            <p>
+                                A submit button is rendered. It submits, by default, the &lt;form&gt; and executes its action. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>required</code></td>
+                        <td>none</td>
+                        <td class="att-description">
+                            <p>
+                                Specifies that the field must include a value.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>min</code></td>
+                        <td><code>"a number"</code></td>
+                        <td class="att-description">
+                            <p>
+                             Specifies the minimum value that can be entered into the field in input tags with type <code>number</code>.
+    
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>max</code></td>
+                        <td><code>"a number"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Specifies the maximum value for an &lt;input&gt; field with the <code>type="number"</code>.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>name</code></td>
+                        <td><code>"a name"</code></td>
+                        <td class="att-description">
+                            <p>
+                                In order for a form to send (or submit) data, it needs to be able to put it into key-value pairs.
+                                So the <code>name</code> attribute becomes the key and the value of the input becomes the value.
+                                That value will only be submitted if the <code>name</code> attribute is specified.  
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>minlength</code></td>
+                        <td><code>"a number"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Supports minimum length validation to an input field with type <code>text</code>. 
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>maxlength</code></td>
+                        <td><code>"a number"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Specifies the maximum number of characters that can be entered into a field of an input with the <code>type="text"</code>.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><code>pattern</code></td>
+                        <td><code>"a regex"</code></td>
+                        <td class="att-description">
+                            <p>
+                                Uses a regular expression to match against (or validate) the value of the &lt;input&gt; with <code>type="text"</code>. 
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+
+        <section class="paragraph">
+            <h3>HTML Form Validator</h3>
+            <p class="article">
+                HTML forms allow you to specify different kinds of validation for your input fields to make sure that data is entered correctly before being submitted. HTML supports a number of different validators, 
+                including things like minimum value, minimum/maximum length, etc. The validators are specified as attributes on the &lt;input&gt;field.                
+            </p>    
+        </section>
+        
+        <section class="paragraph">
+            <h3>Submitting a Form</h3>
+            <p class="article">
+                Once we have collected information in a form we can send that information somewhere else by using the <code>action</code> and <code>method</code> attributes. The <code>action</code> attribute tells the form to send the information. A URL is assigned that determines the recipient of the information. The <code>method</code> attribute tells the form what to do with that information once it's sent. 
+                An HTTP verb is assigned to the <code>method</code> attribute that determines the action to be performed.
+            </p>    
+        </section>
+    
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
